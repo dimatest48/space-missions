@@ -56,7 +56,7 @@ Zawiera tabele:
 
 ## 📸 Zrzuty ekranu
 
-📷 ![Ekran główny](images/ekran_główny.png)
+📷 ![Ekran główny](images/ekran_glowny.png)
 ![ekran_misji](images/ekran_misji.png)
 ![ekran_komentarze](images/ekran_komentarze.png)
 

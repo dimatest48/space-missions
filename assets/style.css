@@ -1,0 +1,547 @@
+  *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+body, html {
+    font-family: 'Outfit', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    width: 100%;
+    color: #333;
+}
+
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+button, .btn {
+    background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+}
+
+.btn {
+    padding: 12px 15px;
+}
+
+
+.comment {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+.delete-link {
+    color: red;
+    float: right;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 16px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* index.php */
+body.home {
+  background-color: #0b0f1a;
+      position: relative;
+}
+
+.container {
+   display: flex;
+      height: 100vh;
+      padding: 40px;
+      gap: 40px;
+    }
+
+.left {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    display: flex;                /* Вмикаємо флексбокс */
+    flex-direction: column;       /* Вертикально */
+    justify-content: flex-end;
+    margin: auto;
+    margin-top: 15%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.right {
+    flex: 1;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      color: #fff;
+      margin: auto;
+      margin-bottom: 10%;
+}
+
+.left h1, .right h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #ffaad4;
+    }
+
+.left p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #f7f1f5;
+    }
+
+
+ button:hover, .btn:hover {
+      background-color: #e0559e;
+      text-decoration: none;
+    }
+
+.btn-secondary {
+      background-color: #6c757d;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5a6268;
+    }
+
+
+hr {
+      border: none;
+      height: 1px;
+      background: #ffffff22;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .left, .right {
+        flex: none;
+        padding: 20px;
+      }
+    }
+
+/* беграунд на index.php */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+     background: linear-gradient(to bottom right, rgba(20, 0, 30, 0.6), rgba(60, 0, 50, 0.7));
+      z-index: -1;
+}
+
+
+
+
+.left ul,
+.right ul {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  list-style: none;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+  position: relative;
+}
+
+.left ul::before,
+.right ul::before {
+  content: "📌";
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-size: 1.5rem;
+  color: #ffaad4;
+}
+
+.left ul li,
+.right ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: #f0eaf1;
+}
+
+.left ul li::before,
+.right ul li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #ff69b4;
+  font-size: 0.9rem;
+}
+
+
+
+.panel {
+  text-decoration: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  color: #fff;
+  padding: 15px;
+  margin: 20px;
+  font-weight: 500;
+  border: 2px solid transparent; /* ← це важливо */
+  border-radius: 40px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel_02{
+      text-decoration: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  color: #fff;
+  padding: 15px;
+  margin: 20px;
+  font-weight: 500;
+  border: 2px solid transparent; /* ← це важливо */
+  border-radius: 30px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 10%;
+}
+
+.panel:hover, .panel_02:hover {
+  border-color: #ffaad4; /* тільки колір змінюється */
+  box-shadow: 0 0 10px #ffaad4; /* необов'язково, але красиво */
+}
+
+
+
+
+.login-wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+
+.login-box {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .login-box h1 {
+            text-align: center;
+            color: #ffaad4;
+            margin-bottom: 24px;
+            font-size: 2rem;
+        }
+
+        .login-box input {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: none;
+        }
+
+        .login-box a {
+            color: #ffaad4;
+        }
+
+        .login-box p {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+.error-list {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: #ffbbbb;
+            border: 1px solid #ff8888;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+
+
+
+
+.login-box label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #fce4f3;
+}
+
+.login-box input[type="text"],
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 5px;
+    transition: background 0.3s, border 0.3s;
+}
+
+.login-box input::placeholder {
+    color: #ccc;
+}
+
+
+.login-box form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-box .error-list ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+body.profile-page {
+    background-color: #1a1c1f; /* Темно-сірий, не чорний */
+    color: #f0eaf1;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.profile-container {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-title {
+    text-align: center;
+    color: #ffaad4;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.profile-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffaad4;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+    object-fit: cover;
+}
+
+.no-avatar {
+    color: #ccc;
+    font-style: italic;
+}
+
+.profile-info {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 20px 30px;
+    box-shadow: 0 0 12px rgba(255, 105, 180, 0.07);
+    margin-bottom: 30px;
+}
+
+.info-block {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #fce4f3;
+}
+
+.avatar-upload h3 {
+    color: #ffaad4;
+    margin-bottom: 12px;
+}
+
+.avatar-upload form {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.05);
+}
+
+.avatar-upload input[type="file"] {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.back-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #ffaad4;
+    font-weight: 500;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.back-link a:hover {
+    border-color: #ffaad4;
+    box-shadow: 0 0 8px #ffaad4;
+    background-color: rgba(255, 105, 180, 0.05);
+}
+
+
+
+.card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.mission-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+
+.mission-text {
+    flex: 1;
+}
+
+
+
+
+#block_panel{
+   display: flex;
+    margin-top: -30px;
+}
+
+.panel_mis{
+    display: block;
+    text-decoration: none;
+  left: 20px;
+  z-index: 10;
+  color: #fff;
+  padding: 15px;
+  margin: 20px;
+  font-weight: 500;
+  border: 2px solid transparent; /* ← це важливо */
+  border-radius: 40px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel_mis:hover{
+      border-color: #ffaad4; /* тільки колір змінюється */
+  box-shadow: 0 0 10px #ffaad4; /* необов'язково, але красиво */
+}
